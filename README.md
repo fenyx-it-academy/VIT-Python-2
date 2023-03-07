@@ -17,4 +17,9 @@ Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan
 
 =====================================================================
 
+Not: Odevinizi persembe gun sonuna kadar derste anlatildigi sekilde Github araciligiyla gondermeniz gerekmektedir. Odevle alakali tum sorularinizi ders hocaniza sorabilirsiniz.
+Kolay gelsin...
+
+
+
 
