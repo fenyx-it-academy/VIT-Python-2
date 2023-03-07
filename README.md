@@ -7,7 +7,7 @@ Soru-1 : Kullanıcıdan Adi, Soyadi, Ogrenci Numarasi, 4 ders adi, bu derslerin 
 
 =====================================================================
 
-Soru-2 : Soru-4: Aşağıdaki listede bulunan sayıların ortalamasını hesaplayan bir Python programı yazın. Daha sonra, listedeki her bir sayıyı, ortalamadan büyük olanlar "yuksek", ortalamadan küçük olanlar "dusuk" olarak ayıran bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın.
+Soru-2 : Aşağıdaki listede bulunan sayıların ortalamasını hesaplayan bir Python programı yazın. Daha sonra, listedeki her bir sayıyı, ortalamadan büyük olanlar "yuksek", ortalamadan küçük olanlar "dusuk" olarak ayıran bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın.
 
 sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
 
