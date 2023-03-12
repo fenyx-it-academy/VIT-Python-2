@@ -1,0 +1,32 @@
+#Eerste probleem
+print("""Welkom bij het programma waar je meer te weten komt over je examenresultaten.
+Aan het einde van het programma kun je zien of je geslaagd bent.""")
+Voornaam = input(
+    "Voornaam: ")  # Program icinde kullanacagimiz degiskenleri belirliyoruz.
+Achternaam = input("Achternaam: ")
+HetNummer = input("Leerling nummer: ")
+# Burada listeleri olustururken Dort ders icin 4 tane bos elemanla tanimliyoruz.
+Vakken = ["", "", "", ""]
+CijfersEerste = ["", "", "", ""]
+CijfersLaatste = ["", "", "", ""]
+Uitslag = ["", "", "", ""]
+
+for i in range(4): #for dongusu 4 defa calissin ve dort dersin adini vize ve final notunu hesaplasin ve onceden hazirladigimiz listelerin icine kaydetsin.
+    Vakken[i] = input("Vul in de naam van het vak: ")
+    CijfersEerste[i] = int(input("Vul in eerste cijfers van het vak: "))
+    CijfersLaatste[i] = int(input("Vul in laatste cijfers van het vaak: "))
+    Uitslag[i] = CijfersEerste[i]*0.4 + CijfersLaatste[i]*0.6
+    print("Alle informatie opgeslagen.")
+    print(Uitslag[i])
+print("Gegevens van de leerling:", Voornaam.upper(), sep="\n")
+print(Achternaam.upper())
+print(HetNummer)
+for i in range(4): #for dongusu bu sefer calistiginda sirasiyla ogrencinin derslerden gectigini ya da kaldigini kullaniciya bildirsin.
+    print("""
+VAKKEN
+-------""")
+    print(f"{Vakken[i].upper()}")
+    if Uitslag[i] >= 50:
+        print("GESLAAGD")
+    else:
+        print("GEZAKT")
