@@ -11,22 +11,38 @@ CijfersEerste = ["", "", "", ""]
 CijfersLaatste = ["", "", "", ""]
 Uitslag = ["", "", "", ""]
 
-for i in range(4): #for dongusu 4 defa calissin ve dort dersin adini vize ve final notunu hesaplasin ve onceden hazirladigimiz listelerin icine kaydetsin.
+# for dongusu 4 defa calissin ve dort dersin adini vize ve final notunu hesaplasin ve onceden hazirladigimiz listelerin icine kaydetsin.
+for i in range(4):
     Vakken[i] = input("Vul in de naam van het vak: ")
     CijfersEerste[i] = int(input("Vul in eerste cijfers van het vak: "))
     CijfersLaatste[i] = int(input("Vul in laatste cijfers van het vaak: "))
     Uitslag[i] = CijfersEerste[i]*0.4 + CijfersLaatste[i]*0.6
     print("Alle informatie opgeslagen.")
-    print(Uitslag[i])
-print("Gegevens van de leerling:", Voornaam.upper(), sep="\n")
-print(Achternaam.upper())
-print(HetNummer)
-for i in range(4): #for dongusu bu sefer calistiginda sirasiyla ogrencinin derslerden gectigini ya da kaldigini kullaniciya bildirsin.
-    print("""
-VAKKEN
--------""")
+print("Gegevens van de leerling:", Voornaam.upper(),
+      Achternaam.upper(), HetNummer, sep="\n")
+# for dongusu bu sefer calistiginda sirasiyla ogrencinin derslerden gectigini ya da kaldigini kullaniciya bildirsin.
+for i in range(4):
     print(f"{Vakken[i].upper()}")
     if Uitslag[i] >= 50:
         print("GESLAAGD")
     else:
         print("GEZAKT")
+#Twede probleem
+Sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+SayiToplam = 0
+SayiAdeti = 0
+for i in range(len(Sayilar)):#Elimizde olan listedeki elemanları kullanmak için for döngüsü ile elemanlara tektek erişiyoruz.
+    SayiToplam += Sayilar[i] #Sayıların toplamını hesaplıyoruz.
+    SayiAdeti += 1 #İçinde kaç sayı olduğunu bilmek bize ortalamayı hesaplamamızı sağlayacak.
+Ortalama = SayiToplam / SayiAdeti
+for i in range(len(Sayilar)): #for döngüsü ile elemanlara bir daha bakarak ortalamaya göre kıyaslıyoruz.
+    if Sayilar[i] > Ortalama:
+        print(
+            f"{Sayilar[i]}, sayilarin ortalamasi olan {Ortalama} sayisindan buyuktur.")
+    else:
+        print(
+            f"{Sayilar[i]}, sayilarin ortalamasi olan {Ortalama} sayisindan buyuk degildir.")
+
+#Derde probleem
+
+
