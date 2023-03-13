@@ -1,0 +1,93 @@
+# =====================================================================
+
+# Soru-1 : Kullanıcıdan Adi, Soyadi, Ogrenci Numarasi, 4 ders adi, bu derslerin Vize ve Final notlari istenecektir. 
+# Vize notunun % 40′ı ile Final Notunun %60′ınin toplamı yil sonu ortalamasini verecektir. 
+# Ortalama 50‘den küçükse ekranda “KALDI“, 50 ve üstüyse ekranda “GEÇTİ” yazdırılacaktır. 
+# Bu yazdirma islemi 4 ders icinde yapilacak ve dersler alt alta yazdirilacaktir.
+
+#=======================================================================
+
+# Kullanıcıdan gerekli bilgileri alınması
+Adi=input('Adiniz? ')
+Soyadi=input('Soyadiniz? ')
+OgrenciNumarasi=int(input('Ogrenci Numaraniz? '))
+r=1
+Dersler=[]
+VizeNotlari=[]
+FinalNotlari=[]
+YilSonuDersOrtalamalari=[]
+# Dört ders adını ve notlarını kullanıcıdan istenmesi ve her ders için yıl sonu ortalamasının hesaplanması
+while r<5:
+    Ders=input(f'Ders {r} nedir? ')
+    VizeNotuDers=input(f'Ders {r} Vize notu nedir? ')
+    Finalnotu=input(f'Ders {r} Final notu nedir? ')   
+    Dersler.append(Ders)
+    VizeNotlari.append(VizeNotuDers)
+    FinalNotlari.append(Finalnotu)
+    DersOrtalamasi=int(int(VizeNotuDers)*0.4+int(Finalnotu)*0.6)
+    YilSonuDersOrtalamalari.append(DersOrtalamasi)
+    r+=1
+x=0
+# Alinan bilgilere gore yazdırılması
+for i in YilSonuDersOrtalamalari:
+    if i>50:
+        print(f'{OgrenciNumarasi} li Sayin {Adi} {Soyadi} {YilSonuDersOrtalamalari[x]} ortalama ile {Dersler[x]}  dersinden GECTINIZ')
+    else:
+        print(f'{OgrenciNumarasi} li Sayin {Adi} {Soyadi} {YilSonuDersOrtalamalari[x]} ortalama ile {Dersler[x]} dersinden KALDINIZ')
+    x+=1
+ 
+ #=======================================================================   
+# Soru-2 : Aşağıdaki listede bulunan sayıların ortalamasını hesaplayan bir Python programı yazın. 
+# Daha sonra, listedeki her bir sayıyı, ortalamadan büyük olanlar "yuksek", ortalamadan küçük olanlar "dusuk" olarak 
+# ayıran bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın.
+
+# sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+
+#=======================================================================
+
+sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+
+# sayıların ortalamasını hesapla
+ortalama = sum(sayilar) / len(sayilar)
+print("Sayıların Ortalaması:", ortalama)
+
+# yüksek ve düşük sayıları say
+yuksek = 0
+dusuk = 0
+
+for sayi in sayilar:
+    if sayi > ortalama:
+        yuksek += 1
+    elif sayi < ortalama:
+        dusuk += 1
+
+print("Ortalamadan Yüksek Sayıların Sayısı:", yuksek)
+print("Ortalamadan Düşük Sayıların Sayısı:", dusuk)
+
+
+# =====================================================================
+
+# Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan bir Python programı yazın. 
+# Program, kullanıcıdan iki sayı isteyecek ve bu iki sayı arasındaki tek sayıların toplamını hesaplayacaktır. 
+# Program, kullanıcının geçersiz bir giriş yapması durumunda hata mesajı yazdıracaktır.
+# Programi yazarken While dongusunu kullanmaniz gerekmektedir.
+
+# ======================================================================
+# kullanıcıdan iki sayı iste
+baslangic = int(input("Başlangıç sayısını girin: "))
+bitis = int(input("Bitiş sayısını girin: "))
+
+# geçersiz giriş kontrolü
+if baslangic >= bitis:
+    print("Hatalı giriş! Başlangıç sayısı, bitiş sayısından küçük olmalıdır.")
+else:
+    # tek sayıların toplamını hesapla
+    toplam = 0
+    i = baslangic
+    
+    while i <= bitis:
+        if i % 2 == 1:
+            toplam += i
+        i += 1
+    
+    print("Başlangıç ve bitiş arasındaki tek sayıların toplamı:", toplam)
