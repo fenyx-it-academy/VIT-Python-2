@@ -1,5 +1,26 @@
 #1.Sorunun Cevabı
+ad=input("Adınızı Giriniz:  ")
+soyad=input("Soyadınızı Giriniz:  ")
+ogrno=input("Öğrenci Numarası Giriniz: ")
+i=0
 
+dersler=[]
+sonuclar=[]
+while i<4:
+        i+=1
+        ders=input(f"{i}.Ders Adını Giriniz:  ")
+        vize=int(input("Vize Notu Giriniz:  "))
+        final=int(input("final Notu Giriniz:  "))
+        dersler.append(ders)
+        sonuclar.append((vize*0.4)+(final*0.6))
+i=0
+print(ogrno," Öğrenci Numaralı",ad,soyad,"Ders Durumu:")
+for x in sonuclar:
+  if x>50:
+    print(f"{dersler[i]} dersinden geçti")
+  elif x<50:
+    print(f"{dersler[i]} dersinden kaldı")
+  i+=1
 
 
 -----------------------------------------------------------------------
