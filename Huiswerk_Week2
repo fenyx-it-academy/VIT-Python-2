@@ -24,9 +24,10 @@ print("Gegevens van de leerling:", Voornaam.upper(),
 for i in range(4):
     print(f"{Vakken[i].upper()}")
     if Uitslag[i] >= 50:
-        print("GESLAAGD")
+        print("Gefeliciteerd, je bent GESLAAGD")
     else:
-        print("GEZAKT")
+        print("Je bent helaas GEZAKT")
+        
 #Twede probleem
 Sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
 SayiToplam = 0
@@ -34,7 +35,7 @@ SayiAdeti = 0
 for i in range(len(Sayilar)):#Elimizde olan listedeki elemanları kullanmak için for döngüsü ile elemanlara tektek erişiyoruz.
     SayiToplam += Sayilar[i] #Sayıların toplamını hesaplıyoruz.
     SayiAdeti += 1 #İçinde kaç sayı olduğunu bilmek bize ortalamayı hesaplamamızı sağlayacak.
-Ortalama = SayiToplam / SayiAdeti
+Ortalama = SayiToplam / SayiAdeti #Tüm bu for döngüsü yerine Ortalama = sum(Sayilar)/len(Sayilar) ile daha kolay yazabilirdik.
 for i in range(len(Sayilar)): #for döngüsü ile elemanlara bir daha bakarak ortalamaya göre kıyaslıyoruz.
     if Sayilar[i] > Ortalama:
         print(
@@ -44,5 +45,17 @@ for i in range(len(Sayilar)): #for döngüsü ile elemanlara bir daha bakarak or
             f"{Sayilar[i]}, sayilarin ortalamasi olan {Ortalama} sayisindan buyuk degildir.")
 
 #Derde probleem
-
+KucukSayi = int(input("Kucuk olan sayiyi giriniz: "))
+BuyukSayi = int(input("Buyuk olan sayiyi giriniz: "))
+TekSayilarToplam = 0
+while KucukSayi < BuyukSayi:
+    for i in range(KucukSayi, BuyukSayi+1):
+        if i % 2 != 0:
+            TekSayilarToplam += i
+        else:
+            continue
+    print(TekSayilarToplam)
+    exit()
+else:
+    print("Hata! Gecersiz giris.")
 
