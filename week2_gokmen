@@ -1,0 +1,74 @@
+#Soru-1 : Kullanıcıdan Adi, Soyadi, Ogrenci Numarasi, 4 ders adi, bu derslerin Vize ve Final notlari istenecektir. 
+#Vize notunun % 40′ı ile #Final Notunun %60′ınin toplamı yil sonu ortalamasini verecektir. Ortalama 50‘den küçükse 
+#ekranda “KALDI“, 50 ve üstüyse ekranda “GEÇTİ” #yazdırılacaktır. Bu yazdirma islemi 4 ders icinde yapilacak ve 
+#dersler alt alta yazdirilacaktir.
+
+
+isim = input("isminiz:")
+soyad = input("soyad:")
+no = input("Numaranız:")
+dersler = []      #dersler için boş liste oluşturulur
+vizeler = []      #vizeler için boş liste
+finals = []       #final için boş liste
+for i in range(4):
+    ders = input("Dersi gir:")  #ders girilir 
+    dersler.append(ders)      #  dersler += [ders]  alternatif code kullanılabilir  // derse isimleri sırayla listeye eklenir  
+    vize = int(input("Bu dersin vizesi:")) # vize sonucu girilir 
+    vizeler.append(vize)                #vize sonuçları vizeler listesine sırayla eklenir
+    final = int(input("Bu dersin finali:"))
+    finals.append(final)                #finals += [final]
+for i in range(4):
+    if vizeler[i]*0.6+finals[i]*0.4<50: #vize ve final toplam hesabı yapılır ve sonuca göre devam edilir
+        print(dersler[i], "den", "kaldı") #sonuç 50 den az ise kaldır mesajı yazırılır
+    elif vizeler[i]*0.6+finals[i]*0.4>50:
+        print(dersler[i], "den", "Geçti")
+
+
+#Soru-2 : Aşağıdaki listede bulunan sayıların ortalamasını hesaplayan bir Python programı yazın. Daha sonra, 
+# istedeki her bir sayıyı, ortalamadan büyük olanlar "yuksek", ortalamadan küçük olanlar "dusuk" olarak ayıran 
+# bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın. 
+# sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+
+
+numbers = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+total=0
+bigger=0
+smaller=0
+for i in numbers:
+    total += i  # Loop içinde liste elemanları sırayla toplanır
+ave=total/len(numbers) #liste elemanlarının ortalaması hesaplanır
+for x in numbers:
+    if x>ave:   #sayilar sirayla average ile karsilastirilir.
+        bigger +=1 #buyuk olanlar icin sayac calisir
+        
+    else:
+        smaller +=1 # average dan buyuk olanlar icin sayac calisir 
+print("Average: ", ave)
+print(smaller, "Number smaller then the average")
+print(bigger,"Numbers bigger then the average")
+
+#Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan bir Python programı yazın. 
+# Program, kullanıcıdan iki sayı isteyecek ve bu iki sayı arasındaki tek sayıların toplamını hesaplayacaktır. 
+# Program, kullanıcının geçersiz bir giriş yapması durumunda hata mesajı yazdıracaktır.Programi yazarken 
+# While dongusunu kullanmaniz gerekmektedir.
+
+
+counter = 0
+total = 0
+while True:
+    begin_number = (input("Begining number:"))   #baslangıç sayısı girilir
+    end_number = (input("End Number:"))          #bitis sayisi girilir
+    try:                                        # kullanıcı sayı yerine harf girerse hata ayıklama yapacak
+        begin_number=int(begin_number)          # integer a dönüştürülür ve try h
+        end_number = int(end_number)  
+    except ValueError:                          #ekrandan harf girilirse sistem hata vermeden kullanıcı sadece rakam girmisi için uyarılıyor            
+        print("Lütfen sadece sayı giriniz...")
+    else:
+        break
+while True:
+    if (begin_number)%2 != 0:           # mod ile tek sayı olup olmadığı tespit edilir
+        total += begin_number           #tek sayi ise toplanir 
+    begin_number += 1                   # sayac ile sirayla araliktaki diger sayiya gecilir 
+    if begin_number == end_number:      # listedeki son sayiya ulasinca loop dan çıkılır
+        break
+print("Total of Odd numbers:",total)
