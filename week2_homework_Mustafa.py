@@ -80,9 +80,9 @@ tekToplam=0
 if ilk <=son:
     
     while ilk<=son:
+        if (ilk)%2!=0:
+            tekToplam+=ilk
         ilk+=1 
-        if (ilk-1)%2!=0:
-            tekToplam=tekToplam+ilk-1
            
     print(tekToplam)
     
