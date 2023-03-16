@@ -68,6 +68,24 @@ print(len(yuksek), " tane eleman ortalamadan dusuk. Bunlar:", yuksek)
 
 =====================================================================
 
-Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan bir Python programı yazın. Program, kullanıcıdan iki sayı isteyecek ve bu iki sayı arasındaki tek sayıların toplamını hesaplayacaktır. Program, kullanıcının geçersiz bir giriş yapması durumunda hata mesajı yazdıracaktır.Programi yazarken While dongusunu kullanmaniz gerekmektedir.
+# Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan bir Python programı yazın. 
+# Program, kullanıcıdan iki sayı isteyecek ve bu iki sayı arasındaki tek sayıların toplamını hesaplayacaktır. 
+# Program, kullanıcının geçersiz bir giriş yapması durumunda hata mesajı yazdıracaktır.
+# Programi yazarken While dongusunu kullanmaniz gerekmektedir.
 
+ilk=int(input("Ilk sayiyi giriniz:"))
+son=int(input("Son sayiyi giriniz:"))
+
+tekToplam=0
+if ilk <=son:
+    
+    while ilk<=son:
+        ilk+=1 
+        if (ilk-1)%2!=0:
+            tekToplam=tekToplam+ilk-1
+           
+    print(tekToplam)
+    
+else:
+    print("Hatali giris")
 =====================================================================
