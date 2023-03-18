@@ -43,22 +43,28 @@ for i in ortalamalar:
 # ayıran bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın.
 
 sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
-toplam = 0
-yuksek = 0
-dusuk = 0
+yuksek=0
+liste_yuksek=[]
+dusuk=0
+liste_dusuk=[]
+
+ort= sum(sayilar)/len(sayilar)
+print(ort)
+
 for i in sayilar:
-    toplam +=i
-ortalama = toplam / len(sayilar)    
-for i in sayilar:
-        if ortalama > i:
-            yuksek +=1
-        else :
-            dusuk +=1     
+    if ort > i:
+        dusuk+=1
+        liste_dusuk.append(i)
+    else:
+        yuksek+=1
+        liste_yuksek.append(i)
         
 print("""
-      {} sayilar listesinin ortalamasidir. 
-      {} kadar sayi ortalamadan buyuktur. 
-      {} kadar ise kucuktur.""".format(ortalama, yuksek, dusuk))    
+      {} sayilarin ortalamasidir. 
+      {} adet sayi ortalamadan yuksektir ve bu sayilar soyledir: {}
+      {} adet sayi ortalamadan dusuktur ve bu sayilar soyledir: {}
+      """.format(ort, yuksek, liste_yuksek, dusuk, liste_dusuk ))   
+  
 
 
 #Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan 
