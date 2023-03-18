@@ -1,0 +1,108 @@
+#Week2Answers1
+
+"""Soru-1 : Kullanıcıdan Adi, Soyadi, Ogrenci Numarasi, 4 ders adi, bu derslerin Vize ve Final notlari istenecektir. 
+Vize notunun % 40′ı ile Final Notunun %60′ınin toplamı yil sonu ortalamasini verecektir. Ortalama 50‘den küçükse 
+ekranda “KALDI“, 50 ve üstüyse ekranda “GEÇTİ” yazdırılacaktır. Bu yazdirma islemi 4 ders icinde yapilacak ve dersler alt alta yazdirilacaktir."""
+
+Ad=input("Adınız: ")
+Soyad=input("Soyadınız: ")
+OgrenciNum=input("Öğrenci Numaranız: ")
+
+Ders=0
+while Ders <4 :
+    DersAd1=input("Ders Adı: ")
+    VizeNot1=int(input("Vize Notu: "))
+    FinalNot1=int(input("Final Notu: "))
+    Ort1=int(VizeNot1*0.4)+int(FinalNot1*0.6)
+    Ders +=1
+    
+    DersAd2=input("Ders Adı: ")
+    VizeNot2=int(input("Vize Notu: "))
+    FinalNot2=int(input("Final Notu: "))
+    Ort2=int(VizeNot2*0.4)+int(FinalNot2*0.6)
+    Ders +=1
+    
+    DersAd3=input("Ders Adı: ")
+    VizeNot3=int(input("Vize Notu: "))
+    FinalNot3=int(input("Final Notu: "))
+    Ort3=int(VizeNot3*0.4)+int(FinalNot3*0.6)
+    Ders +=1
+    
+    DersAd4=input("Ders Adı: ")
+    VizeNot4=int(input("Vize Notu: "))
+    FinalNot4=int(input("Final Notu: "))
+    Ort4=int(VizeNot4*0.4)+int(FinalNot4*0.6)
+    Ders +=1
+    
+    if Ort1 <50:
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd1, "Dersi Yıl Sonu Ortalamanız: ", Ort1, "Dersten KALDINIZ.")
+    else :
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd1, "Dersi Yıl Sonu Ortalamanız: ", Ort1, "Dersten GEÇTİNİZ!.")
+
+    if Ort2 <50:
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd2, "Dersi Yıl Sonu Ortalamanız: ", Ort2, "Dersten KALDINIZ.")
+    else :
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd2, "Dersi Yıl Sonu Ortalamanız: ", Ort2, "Dersten GEÇTİNİZ!.")
+    
+    if Ort3 <50:
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd3, "Dersi Yıl Sonu Ortalamanız: ", Ort3, "Dersten KALDINIZ.")
+    else :
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd3, "Dersi Yıl Sonu Ortalamanız: ", Ort3, "Dersten GEÇTİNİZ!.")
+    
+    if Ort4 <50:
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd4, "Dersi Yıl Sonu Ortalamanız: ", Ort4, "Dersten KALDINIZ.")
+    else :
+        print(OgrenciNum, "Öğrenci Numaralı" "Sayın", Ad, Soyad, DersAd4, "Dersi Yıl Sonu Ortalamanız: ", Ort4, "Dersten GEÇTİNİZ!.")
+
+***************************************************************************************************************************************************
+# Week2Answer2
+
+"""Soru-2 : Aşağıdaki listede bulunan sayıların ortalamasını hesaplayan bir Python programı yazın. 
+Daha sonra, listedeki her bir sayıyı, ortalamadan büyük olanlar "yuksek", ortalamadan küçük olanlar "dusuk" olarak 
+ayıran bir "for" döngüsü ekleyin ve her bir grubun sayısını ekrana yazdırın. ** sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]"""
+
+Sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+print("\n")
+print("Sayılar:",  Sayilar)
+Ortlama= sum(Sayilar)/len(Sayilar)
+print( "\n" "Listenin Ortalaması:", Ortlama, "\n")
+
+Yüksek=0
+Düşük=0
+for i in Sayilar:
+    if i<Ortlama:
+        Düşük +=1
+    elif i>Ortlama:
+        Yüksek +=1
+
+print("Ortalamadan YÜKSEK olan eleman sayısı: ", Yüksek)
+print("Ortalamadan DÜŞÜK olan eleman sayısı: ", Düşük, "\n")
+        
+***************************************************************************************************************************************************
+
+# Week2Answer3
+
+"""Soru-3: Verilen bir sayı aralığındaki tek sayıların toplamını hesaplayan bir Python 
+programı yazın. Program, kullanıcıdan iki sayı isteyecek ve bu iki sayı arasındaki tek sayıların 
+toplamını hesaplayacaktır. Program, kullanıcının geçersiz bir giriş yapması durumunda hata 
+mesajı yazdıracaktır.Programi yazarken While dongusunu kullanmaniz gerekmektedir."""
+
+print("GİRİLEN İKİ SAYI ARASINDAKİ TEK SAYILARIN TOPLAMINI HESAPLAMA","\n")
+
+IlkSayi=int(input("İlk sayıyı giriniz: "))
+IkinciSayi=int(input("İkinci sayıyı giriniz: "))
+
+if  IlkSayi >= IkinciSayi:
+    print("Lütfen ikinci sayıyı ilk sayıdan büyük giriniz.")
+else :
+    TekSayilarToplami =0
+    i = IlkSayi
+    
+    while i <= IkinciSayi:
+        if i % 2 == 1:
+            TekSayilarToplami +=i
+        i +=1
+    
+    print("İlk sayı ile ikinci sayı arasındaki TEK SAYILARIN toplamı=", TekSayilarToplami)
+            
+#deneme değişim kontrolü
