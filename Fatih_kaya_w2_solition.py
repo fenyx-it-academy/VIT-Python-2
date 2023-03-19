@@ -78,8 +78,8 @@ while first_number<second_number:
     numbers+=2 
     if numbers > second_number:
         break
-
 else:
     print("Hatalı Giriş Yaptınız!")
+
 print(sum if sum>0 else "", end="")
     
