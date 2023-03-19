@@ -62,6 +62,15 @@ for j in sayilar:
     else:
         print(f"{j} ->  'Eşit'") 
 
+# Soru-2 (While)
+# sayilar = [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+# length = len(sayilar)
+# sum = 0
+# while sayilar:
+#     sum += sayilar.pop()
+# everage = sum / length
+# print(f"Listedeki sayıların ortalaması: {everage}")
+
 #Soru-3
 first_number = int(input("İlk Sayı: "))
 second_number = int(input("İkinci Sayı: "))
