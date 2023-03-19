@@ -44,17 +44,12 @@ print("---------------------------------------------------------------------")
 #question3
 while True:
 
-    print("lütfen 2 sayı giriniz... çıkış yapmak için q ye basınız..")
-
     num1 = input("1. sayıyı giriniz :")
-    if num1 == "q":
-        print("Çıkış yaptınız...")
-        break
     num2 = input("2. sayıyı giriniz :")
 
-    if num1 == "q" or num2 == "q":
-        print("Çıkış yaptınız...")
-        break
+    if num1 > num2:
+        print("1. sayı 2. sayıdan küçük olmalıdır. Tekrar deneyiniz.")
+        continue
     
     tek = [i for i in range(int(num1)+1,int(num2)) if i % 2 == 1]
 
