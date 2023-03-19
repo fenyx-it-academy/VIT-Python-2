@@ -63,16 +63,23 @@ for j in sayilar:
         print(f"{j} ->  'Eşit'") 
 
 #Soru-3
+first_number = int(input("İlk Sayı: "))
+second_number = int(input("İkinci Sayı: "))
+
 sum = 0
 if first_number%2==1:
     numbers= first_number
 else:
     numbers=first_number+1
 
-while True:
+
+while first_number<second_number:
     sum +=numbers
     numbers+=2 
     if numbers > second_number:
         break
-print(sum)
+
+else:
+    print("Hatalı Giriş Yaptınız!")
+print(sum if sum>0 else "", end="")
     
