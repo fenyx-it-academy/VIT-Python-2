@@ -25,8 +25,11 @@ while True:
             break
         index+=1
 tekSayiToplami=0
-for x in range( sayilar[0],sayilar[1]):
+x=sayilar[0]
+while x<=sayilar[1]:
+#for x in range( sayilar[0],sayilar[1]+1):
     if x%2==1:
         tekSayiToplami+=x
+    x+=1
 print("{} ile {} arasındaki tek sayıların toplamı = {}".format(sayilar[0],sayilar[1],tekSayiToplami))
         
