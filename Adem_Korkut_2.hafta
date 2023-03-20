@@ -1,0 +1,68 @@
+# 2. Hafta Odevleri
+    # Soru 1: Not ortalamasi hesaplama
+
+ad = input("Adinizi giriniz:")
+soyad = input("Soyisminizi giriniz:")
+numara = input("Ogrenci numaranizi giriniz:")
+
+ders_1= input("Ders 1: ")
+ders_1_vize= int(input("Vize notunuz: "))
+ders_1_final= int(input("Final notunuz: "))
+
+ders_2= input("Ders 2: ")
+ders_2_vize= int(input("Vize notunuz: "))
+ders_2_final= int(input("Final notunuz: "))
+
+ders_3= input("Ders 3: ")
+ders_3_vize= int(input("Vize notunuz: "))
+ders_3_final= int(input("Final notunuz: "))
+
+ders_4= input("Ders 4: ")
+ders_4_vize= int(input("Vize notunuz: "))
+ders_4_final= int(input("Final notunuz: "))
+
+ders_1_ort= (ders_1_vize * 0.4) + (ders_1_final * 0.6)
+ders_2_ort= (ders_2_vize * 0.4) + (ders_2_final * 0.6)
+ders_3_ort= (ders_3_vize * 0.4) + (ders_3_final * 0.6)
+ders_4_ort= (ders_4_vize * 0.4) + (ders_4_final * 0.6)
+
+tum_ortalamalar= [ders_1_ort, ders_2_ort, ders_3_ort, ders_4_ort] # gecip kalma durumunda for dongusu kullanacagim icin dongunun dolasabilecegi bu listeyi olusturdum.
+
+print("Sayin {} ogrenci numarali {} {}, bu donem takip ettiginiz \n {}, \n {}, \n {}, \n {} derslerindeki basari durumunuz asagidaki gibidir." .format(numara, ad, soyad, ders_1, ders_2, ders_3, ders_4))
+
+
+for i in tum_ortalamalar:
+    if (i > 50):
+        print("Gecti") 
+    else:
+        print("Kaldi")
+
+    # Soru 2: Liste halinde verilen sayilarin ortalamasinin alinmasi ve diger sayilarin ortalamaya gore karsilastirilmasi
+
+sayilar= [42, 29, 17, 15, 10, 9, 6, 4, 2, 1]
+toplam= 0
+for i in sayilar:
+    toplam += i
+ortalama= int (toplam / len(sayilar)) # 4 islemde sonucu fload olarak verilen sadece bolme islemi oldugu icin islemin int defgeri olarak verilmesini istedim.
+print("Listenin ortalama degeri:", ortalama)
+for i in sayilar:
+    if i > ortalama:
+        print(i, "yuksek")
+    elif i == ortalama:
+        print(i, "Ortalamaya esit")
+    else:
+        print(i,"dusuk")
+
+
+
+    # Soru 3: Kullanicidan alinan iki sayi arasindaki tek sayilarin toplami
+
+ilk_sayi= int(input("Bir sayi giriniz:"))
+ikinci_sayi= int(input("Bir sayi daha giriniz:"))
+tek_sayi= 0 # Bizden tek sayilarin toplami istendigi icin oncelikle bir tek sayi degeri atadim.
+for i in range (ilk_sayi, ikinci_sayi +1): #kullanicinin girdigi ikinci sayiyi da hesaba katmasi icin 1 eklenerek liste icinde kalmasi saglandi.
+    if (i %2 != 0): # Tek sayilarin 2'ye bolumunden kalan 0 olmayacagi icin tek sayilari bu sekilde saptayabiliriz.
+        tek_sayi += i
+print("Tutulan iki sayi arasindaki tek sayilarin toplami: {}". format(tek_sayi))
+
+
