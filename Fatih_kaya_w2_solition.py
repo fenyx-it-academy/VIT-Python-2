@@ -71,8 +71,25 @@ for j in sayilar:
 # everage = sum / length
 # print(f"Listedeki sayıların ortalaması: {everage}")
 
-#Soru-3
+#Soru-3.1
+
 first_number = int(input("İlk Sayı: "))
+second_number = int(input("İkinci Sayı: "))
+
+sum = 0
+while first_number>second_number:
+    print("Hatalı Giriş Yaptınız!")
+    first_number = int(input("İlk Sayı: "))
+    second_number = int(input("İkinci Sayı: "))
+else:
+    for i in range(first_number+1,second_number):
+        if i%2==1:
+            sum +=i
+  
+print(sum)
+
+#Soru-3.2
+first_number = int(input("İlk Sayı: "))+1
 second_number = int(input("İkinci Sayı: "))
 
 sum = 0
