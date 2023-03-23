@@ -1,0 +1,67 @@
+#cevap1
+ad=input("Ogrenci adi: ")
+soyad=input("Ogrenci soyadi: ")
+numara=int(input("Ogrenci numarasi: "))
+     
+ders1=input("Ilk dersiniz: ")
+dersvize1=int(input("Vizeniz: "))
+dersfinal1=int(input("Final notunuz: "))
+ders2=input("Ikinci dersiniz: ")
+dersvize2=int(input("Vizeniz: "))
+dersfinal2=int(input("Final notunuz: "))
+ders3=input("Ucuncu dersiniz: ")
+dersvize3=int(input("Vizeniz: "))
+dersfinal3=int(input("Final notunuz: "))
+ders4=input("Dorduncu dersiniz: ")
+dersvize4=int(input("Vizeniz: "))
+dersfinal4=int(input("Final notunuz: "))
+
+
+ders1ort=int((dersvize1*0.40)+(dersfinal1*0.60))
+ders2ort=int((dersvize2*0.40)+(dersfinal2*0.60))
+ders3ort=(dersvize3*0.40)+(dersfinal3*0.60)
+ders4ort=(dersvize4*0.40)+(dersfinal4*0.60)
+yil_sonu_ort=[ders1ort,ders2ort,ders3ort,ders4ort]
+dersler=[ders1,ders2,ders3,ders4]
+print(f" \n{ders1} ortalamaniz:{ders1ort}\n {ders2} ortalamaniz: {ders2ort}\n {ders3} ortalamaniz: {ders3ort}\n {ders4} ortalamaniz: {ders4ort}\n")
+      
+for i in yil_sonu_ort:
+  if i>50:
+     print("Gecti.")
+  else:
+    print("Kaldi.")
+
+
+    
+#cevap2
+sayilar = [42,29,17,15,10,9,6,4,2,1]
+toplam=sum(sayilar)
+adet=len(sayilar)
+ortalama=(toplam/adet)
+print("Sayilarin ortalamasi:",ortalama)
+for i in sayilar:
+    if i>ortalama:
+        print("Sayi", ortalama, "dan yuksektir.")
+    else:
+        print("Sayi", ortalama, "dan dusuktur.")
+        
+ #cevap3
+while True:
+    try:
+        number1 = int(input("Başlangıç sayısını girin: "))
+        number2 = int(input("Bitiş sayısını girin: "))
+        if number1 >= number2:
+            print("Number1 sayısı number2 sayısından küçük olmalıdır.")
+        else:
+            break
+    except ValueError:
+        print("Lütfen geçerli bir sayı girin.")
+
+total = 0
+sayi = number1
+while sayi <= number2:
+    if sayi % 2 == 1:
+        total += sayi
+    sayi += 1
+
+print(f"{number1} ve {number2} arasındaki tek sayıların toplamı: {total}")
